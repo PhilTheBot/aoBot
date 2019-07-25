@@ -4,8 +4,8 @@ var conversationalForm = window.cf.ConversationalForm.startTheConversation({
   userImage: "https://gulpjs.com/img/gulp-white-text.svg",
   robotImage: "phil-talking-animation.gif",
   submitCallback: function() {
-    alert(
-      "Custom submit callback reached, removing Conversational Form, see markup of this file"
-    );
+    document.getElementsByClassName('dark-theme')[0].style.display = 'none';
+    document.getElementById('form').style.margin = '250px auto 0';
+    document.getElementById('form').style.height = 'auto';
   }
 });
