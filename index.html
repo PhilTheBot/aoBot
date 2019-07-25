@@ -92,7 +92,7 @@
           type="text"
           class="form-control"
           name="address"
-          id="your-address"
+          id="address"
         />
       </fieldset>
 
@@ -103,7 +103,7 @@
           type="text"
           class="form-control"
           name="city"
-          id="your-city"
+          id="city"
         />
       </fieldset>
 
@@ -114,14 +114,14 @@
           type="text"
           class="form-control"
           name="state"
-          id="your-state"
+          id="state"
          />
       </fieldset>
 
       <fieldset>
-        <label for="zip">Zip</label>
+        <label for="zipcode">Zip</label>
         <input
-          cf-questions="I'll will be needing the zip code for that location. Just to be more accurate."
+          cf-questions="I'll be needing the zip code for that location. Just to be more accurate."
           type="text"
           class="form-control"
           name="zipcode"
@@ -129,15 +129,61 @@
           />
       </fieldset>
 
+      <fieldset>
+        <label for="giving-account-name">Giving-account-name</label>
+        <input
+          cf-questions="Ok. Got it. Now this is my favorite part: naming your Giving Account. This is the name we'll share with charities when you grant (unless you choose to remain anonymous). What would you like to name your Giving Account?"
+          type="text"
+          class="form-control"
+          name="giving-account-name"
+          id="giving-account-name"
+          />
+      </fieldset>
+
+      <fieldset>
+        <label for="correspondence-name">correspondence-name</label>
+        <input
+          cf-questions="What name would you like us to use when we send you correspondence like account updates and acknowledgements? For example, you can use Mr. {fname} {lname}"
+          type="text"
+          class="form-control"
+          name="correspondence-name"
+          id="correspondence-name"
+        />
+      </fieldset>
+
+      <fieldset>
+        <label for="brokerage-option">brokerage-option</label>
+        <select
+          cf-questions="Would you like to be able to make contributions to your Giving Account from your Fidelity Brokerage account?"
+          class="form-control"
+          name="brokerage-option"
+          id="brokerage-option">
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <label for="terms-and-conditions">terms-and-conditions</label>
+        <select
+          cf-questions="Great, I'll set that up! Our site makes it really simple to contribute from your Fidelity account. Bill from Legal just informed me we will need you to read and agree to our <i>Terms and Conditions</i>. Good thing is you only need to do this once; we'll use this for any future contributions."
+          class="form-control"
+          name="terms-and-conditions"
+          id="terms-and-conditions">
+          <option>I agree.</option>
+          <option>I do not agree.</option>
+        </select>
+      </fieldset>
+
       <fieldset style="display: none;">
-        <label for="thats-all">Are you ready to submit the form?</label>
+        <label for="thats-all">That's it. You are all set. I'll let you review everything we've discussed before you click submit. Let me know of you want to cancel account opening or proceed?</label>
         <select
           cf-questions="Are you ready to submit the form?"
           name="submit-form"
           id="submit-form"
           class="form-control">
-          <option></option>
-          <option>Yup</option>
+          <option>Cancel</option>
+          <option>Let me review</option>
         </select>
       </fieldset>
 
