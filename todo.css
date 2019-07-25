@@ -215,6 +215,16 @@ body {
 }
 
 a {
-  color: #006990;
-  font: italic;
+  color: #006990 !important;
+  font-style: italic !important;
+}
+
+fieldset {
+  border: none;
+}
+label {
+  width: 200px;
+    display: inline-block;
+    text-align: right;
+    padding-right: 10px;
 }
