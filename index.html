@@ -14,14 +14,13 @@
 
   <body>
     <form id="form">
-      <fieldset
-          cf-question="Hi, I'm Phil. I can help you open a Giving Account, so you can begin granting money to the organizations you care about!"></fieldset>
-      </fieldset>
+      <cf-robot-message cf-questions="Hi, I'm Phil. I can help you open a Giving Account, so you can begin granting money to the organizations you care about!"></cf-robot-message>
       <fieldset>
         <label for="fname">First Name</label>
         <input
           required
           cf-questions="What's your name?"
+          cf-input-placeholder="Enter your First name"
           type="text"
           class="form-control"
           name="fname"
@@ -32,7 +31,8 @@
         <label for="lname">Last Name</label>
         <input 
           required 
-          cf-questions="Nice to meet you. {previous-answer}! And what's your last name?" 
+          cf-questions="Nice to meet you. {fname}! And what's your last name?" 
+          cf-input-placeholder="Enter your Last name"
           type="text"
           class="form-control" 
           name="lname" 
@@ -43,7 +43,8 @@
         <label for="ssn">SSN</label>
         <input
           cf-questions="Ok, I know we just met, but I'm going to need your Social Security number. I'll turn around while you enter it..."
-          type="text"
+          cf-input-placeholder="Social security number"
+          type="password"
           class="form-control"
           name="ssn"
           id="ssn"
@@ -53,7 +54,8 @@
       <fieldset>
         <label for="dob">dob</label>
         <input
-          cf-questions="What is you date of birth in the form of mm/dd/yyyy?"
+          cf-questions="What is you date of birth?"
+          cf-input-placeholder="mm/dd/yyyy"
           type="date"
           name="dob"
           id="dob"
@@ -65,6 +67,7 @@
         <label for="phone">phone</label>
         <input
           cf-questions="If we ever need to reach you by phone, what number should we use?"
+          cf-input-placeholder="Enter your phone number"
           type="number"
           name="phone"
           id="phone"
@@ -109,30 +112,92 @@
 
       <fieldset>
         <label for="state">State</label>
-        <input
+        <select
           cf-questions="I'm not great with geography, what state is that?"
-          type="text"
+          cf-input-placeholder="Select state above."
           class="form-control"
           name="state"
           id="state"
-         />
+         >
+          <option value="---">---</option>
+          <option value="Alabama">Alabama</option>
+          <option value="Alaska">Alaska</option>
+          <option value="Arizona">Arizona</option>
+          <option value="Arkansas">Arkansas</option>
+          <option value="California">California</option>
+          <option value="Colorado">Colorado</option>
+          <option value="Connecticut">Connecticut</option>
+          <option value="Delaware">Delaware</option>
+          <option value="District of Columbia">District of Columbia</option>
+          <option value="Florida">Florida</option>
+          <option value="Georgia">Georgia</option>
+          <option value="Guam">Guam</option>
+          <option value="Hawaii">Hawaii</option>
+          <option value="Idaho">Idaho</option>
+          <option value="Illinois">Illinois</option>
+          <option value="Indiana">Indiana</option>
+          <option value="Iowa">Iowa</option>
+          <option value="Kansas">Kansas</option>
+          <option value="Kentucky">Kentucky</option>
+          <option value="Louisiana">Louisiana</option>
+          <option value="Maine">Maine</option>
+          <option value="Maryland">Maryland</option>
+          <option value="Massachusetts">Massachusetts</option>
+          <option value="Michigan">Michigan</option>
+          <option value="Minnesota">Minnesota</option>
+          <option value="Mississippi">Mississippi</option>
+          <option value="Missouri">Missouri</option>
+          <option value="Montana">Montana</option>
+          <option value="Nebraska">Nebraska</option>
+          <option value="Nevada">Nevada</option>
+          <option value="New Hampshire">New Hampshire</option>
+          <option value="New Jersey">New Jersey</option>
+          <option value="New Mexico">New Mexico</option>
+          <option value="New York">New York</option>
+          <option value="North Carolina">North Carolina</option>
+          <option value="North Dakota">North Dakota</option>
+          <option value="Northern Marianas Islands">Northern Marianas Islands</option>
+          <option value="Ohio">Ohio</option>
+          <option value="Oklahoma">Oklahoma</option>
+          <option value="Oregon">Oregon</option>
+          <option value="Pennsylvania">Pennsylvania</option>
+          <option value="Puerto Rico">Puerto Rico</option>
+          <option value="Rhode Island">Rhode Island</option>
+          <option value="South Carolina">South Carolina</option>
+          <option value="South Dakota">South Dakota</option>
+          <option value="Tennessee">Tennessee</option>
+          <option value="Texas">Texas</option>
+          <option value="Utah">Utah</option>
+          <option value="Vermont">Vermont</option>
+          <option value="Virginia">Virginia</option>
+          <option value="Virgin Islands">Virgin Islands</option>
+          <option value="Washington">Washington</option>
+          <option value="West Virginia">West Virginia</option>
+          <option value="Wisconsin">Wisconsin</option>
+          <option value="Wyoming">Wyoming</option>
+         </select>
       </fieldset>
 
       <fieldset>
         <label for="zipcode">Zip</label>
         <input
           cf-questions="I'll be needing the zip code for that location. Just to be more accurate."
+          cf-input-placeholder="Enter zip code"
           type="text"
           class="form-control"
           name="zipcode"
           id="zipcode"
           />
       </fieldset>
-
+      <cf-robot-message cf-questions="Ok. Got it."></cf-robot-message>
+      <cf-robot-message cf-questions="Now this is my favorite part: naming your Giving Account."></cf-robot-message>
+      <cf-robot-message cf-questions="This is the name we'll share with charities when you grant (unless you choose to remain anonymous). 
+      "></cf-robot-message>
       <fieldset>
         <label for="giving-account-name">Giving-account-name</label>
         <input
-          cf-questions="Ok. Got it. Now this is my favorite part: naming your Giving Account. This is the name we'll share with charities when you grant (unless you choose to remain anonymous). What would you like to name your Giving Account?"
+          cf-questions="What would you like to name your Giving Account?"
+          cf-input-placeholder="Example: {fname} {lname} Fund"
           type="text"
           class="form-control"
           name="giving-account-name"
