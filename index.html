@@ -14,7 +14,8 @@
 
   <body>
     <form id="form">
-      <cf-robot-message cf-questions="Hi, I'm Phil. I can help you open a Giving Account, so you can begin granting money to the organizations you care about!"></cf-robot-message>
+      <cf-robot-message cf-questions="Hi, I'm Phil"></cf-robot-message>
+      <cf-robot-message cf-questions="I can help you open a Giving Account, so you can begin granting money to the organizations you care about!"></cf-robot-message>
       <fieldset>
         <label for="fname">First Name</label>
         <input
@@ -197,7 +198,7 @@
         <label for="giving-account-name">Giving-account-name</label>
         <input
           cf-questions="What would you like to name your Giving Account?"
-          cf-input-placeholder="Example: {fname} {lname} Fund"
+          cf-input-placeholder="Example: {lname} Family Fund"
           type="text"
           class="form-control"
           name="giving-account-name"
@@ -208,7 +209,8 @@
       <fieldset>
         <label for="correspondence-name">correspondence-name</label>
         <input
-          cf-questions="What name would you like us to use when we send you correspondence like account updates and acknowledgements? For example, you can use Mr. {fname} {lname}"
+          cf-questions="What name would you like us to use when we send you correspondence like account updates and acknowledgements?"
+          cf-input-placeholder="Example: Mr. {fname} {lname}"
           type="text"
           class="form-control"
           name="correspondence-name"
@@ -223,14 +225,15 @@
           class="form-control"
           name="brokerage-option"
           id="brokerage-option">
-          <option>Yes</option>
-          <option>No</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
         </select>
       </fieldset>
 
       <fieldset>
         <label for="terms-and-conditions">terms-and-conditions</label>
         <select
+          cf-conditional-brokerage-option="yes"
           cf-questions="Great, I'll set that up! Our site makes it really simple to contribute from your Fidelity account. Bill from Legal just informed me we will need you to read and agree to our <i>Terms and Conditions</i>. Good thing is you only need to do this once; we'll use this for any future contributions."
           class="form-control"
           name="terms-and-conditions"
