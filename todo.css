@@ -184,11 +184,11 @@
   width: 100vw; 
   height: calc(100vh - 250px);
 }
+
 #form {
   height: 0px;
   overflow: hidden;
 }
-
 
 .chat-container {
   position: relative;
@@ -210,6 +210,11 @@
 
 body {
   background-image: url(bg.png);
-  background-repeat-x: no-repeat;
+  background-repeat-x: no-repeat; 
   background-position-x: center;
+}
+
+a {
+  color: #006990;
+  font: italic;
 }
