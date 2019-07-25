@@ -1,146 +1,75 @@
 <!DOCTYPE html>
 <html ng-app="todoApp">
+  
+
   <head>
-      <!-- <script src="angular.min.js"></script> -->
+      <title>Open a Giving Account | Fidelity Charitable</title>
+    <!-- <script src="angular.min.js"></script> -->
     <script src="convo.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/gh/space10-community/conversational-form@latest/dist/conversational-form.min.js"></script> -->
     <link rel="stylesheet" href="todo.css" />
+    <link rel="icon" href="images/favicon.ico">
   </head>
+
+
   <body>
     <form id="form">
+      <fieldset
+          cf-question="Hi, I'm Phil. I can help you open a Giving Account, so you can begin granting money to the organizations you care about!"></fieldset>
+      </fieldset>
       <fieldset>
-        <label for="name">What's your name?</label>
+        <label for="fname">First Name</label>
         <input
           required
-          cf-questions="Hi there! What's your name? 😊"
+          cf-questions="What's your name?"
           type="text"
           class="form-control"
-          name="name"
-          id="name"
-        />
+          name="fname"
+          id="fname"/>
       </fieldset>
 
       <fieldset>
-        <label for="occupation">Occupation</label>
-        <div class="select">
-            <select
-              cf-questions="Great to meet you, {previous-answer}! I'm a web form, what do you do?|Awesome, {previous-answer}! And what do you do?"
-              name="occupation"
-              id="occupation"
-            >
-            <option value="a">aOPTION-</option>
-            <option value="b">bOPTION-</option>
-            <option value="c">cOPTION-</option>
-            <option value="d">dOPTION-</option>
-            <option value="e">eOPTION-</option>
-            <option value="f">fOPTION-</option>
-            <option value="g">gOPTION-</option>
-            <option value="h">hOPTION-</option>
-            <option value="i">iOPTION-</option>
-            <option value="j">jOPTION-</option>
-            <option value="a2">OPTION-a2</option>
-            <option value="b2">OPTION-b2</option>
-            <option value="c2">OPTION-c2</option>
-            <option value="d2">OPTION-d2</option>
-            <option value="e2">OPTION-e2</option>
-            <option value="f2">OPTION-f2</option>
-            <option value="g2">OPTION-g2</option>
-            <option value="h2">OPTION-h2</option>
-            <option value="i2">OPTION-i2</option>
-            <option value="j2">OPTION-j2</option>
-            <option value="a3">OPTION-a3</option>
-            <option value="b3">OPTION-b3</option>
-            <option value="c3">OPTION-c3</option>
-            <option value="d3">OPTION-d3</option>
-            <option value="e3">OPTION-e3</option>
-            <option value="f3">OPTION-f3</option>
-            <option value="g3">OPTION-g3</option>
-            <option value="h3">OPTION-h3</option>
-            <option value="i3">OPTION-i3</option>
-            <option value="j3">OPTION-j3</option>
-            <option value="a4">OPTION-a4</option>
-            <option value="b4">OPTION-b4</option>
-            <option value="c4">OPTION-c4</option>
-            <option value="d4">OPTION-d4</option>
-            <option value="e4">OPTION-e4</option>
-            <option value="f4">OPTION-f4</option>
-            <option value="g4">OPTION-g4</option>
-            <option value="h4">OPTION-h4</option>
-            <option value="i4">OPTION-i4</option>
-            <option value="j4">OPTION-j4</option>
-            <option value="a5">OPTION-a5</option>
-            <option value="b5">OPTION-b5</option>
-            <option value="c5">OPTION-c5</option>
-            <option value="d5">OPTION-d5</option>
-            <option value="e5">OPTION-e5</option>
-            <option value="f5">OPTION-f5</option>
-            <option value="g5">OPTION-g5</option>
-            <option value="h5">OPTION-h5</option>
-            <option value="i5">OPTION-i5</option>
-            <option value="j5">OPTION-j5</option>
-            </select>
-        </div>
-        <!-- <div class="radio">
-          <label>
-            <input
-              type="radio"
-              name="occupation"
-              id="occupation-2"
-              value="designer"
-            />
-            Designer
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input
-              type="radio"
-              name="occupation"
-              id="occupation-3"
-              value="curious-mind"
-            />
-            Curious mind
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input
-              type="radio"
-              name="occupation"
-              id="occupation-2"
-              value="lost"
-            />
-            Lost cause
-          </label>
-        </div> -->
+        <label for="lname">Last Name</label>
+        <input 
+          required 
+          cf-questions="Nice to meet you. {previous-answer}! And what's your last name?" 
+          type="text"
+          class="form-control" 
+          name="lname" 
+          id="lname"/>
       </fieldset>
 
       <fieldset>
-        <label for="company">Company</label>
+        <label for="ssn">SSN</label>
         <input
-          cf-questions="Which company are you with?"
+          cf-questions="Ok, I know we just met, but I'm going to need your Social Security number. I'll turn around while you enter it..."
           type="text"
           class="form-control"
-          name="company"
-          id="company"
+          name="ssn"
+          id="ssn"
         />
       </fieldset>
 
       <fieldset>
-        <label for="opinion"
-          >Will conversational interfaces be everywhere?</label
-        >
-        <select
-          cf-questions="Do you think conversational forms will replace web forms in the future?"
-          name="opinion"
-          id="opinion"
+        <label for="dob">dob</label>
+        <input
+          cf-questions="What is you date of birth in the form of mm/dd/yyyy?"
+          type="date"
+          name="dob"
+          id="dob"
           class="form-control"
-        >
-          <option></option>
-          <option>Definitely</option>
-          <option>Maybe</option>
-          <option>No</option>
-        </select>
+          />
+      </fieldset>
+
+      <fieldset>
+        <label for="phone">phone</label>
+        <input
+          cf-questions="If we ever need to reach you by phone, what number should we use?"
+          type="number"
+          name="phone"
+          id="phone"
+          class="form-control"
+        />
       </fieldset>
 
       <fieldset>
@@ -148,12 +77,56 @@
         <input
           pattern=".+\@.+\..+"
           cf-error="E-mail not correct"
-          cf-questions="If you want to stay updated on conversational interfaces from SPACE10, please give me your email."
+          cf-questions="What is your email address so I can send you important correspondence?"
           type="email"
           class="form-control"
           name="email"
           id="your-email"
         />
+      </fieldset>
+
+      <fieldset>
+        <label for="address">Address</label>
+        <input
+          cf-questions="What is your Street address (or PO Box)?"
+          type="text"
+          class="form-control"
+          name="address"
+          id="your-address"
+        />
+      </fieldset>
+
+      <fieldset>
+        <label for="city">City</label>
+        <input
+          cf-questions="In what city do you live?"
+          type="text"
+          class="form-control"
+          name="city"
+          id="your-city"
+        />
+      </fieldset>
+
+      <fieldset>
+        <label for="state">State</label>
+        <input
+          cf-questions="I'm not great with geography, what state is that?"
+          type="text"
+          class="form-control"
+          name="state"
+          id="your-state"
+         />
+      </fieldset>
+
+      <fieldset>
+        <label for="zip">Zip</label>
+        <input
+          cf-questions="I'll will be needing the zip code for that location. Just to be more accurate."
+          type="text"
+          class="form-control"
+          name="zipcode"
+          id="zipcode"
+          />
       </fieldset>
 
       <fieldset style="display: none;">
@@ -162,8 +135,7 @@
           cf-questions="Are you ready to submit the form?"
           name="submit-form"
           id="submit-form"
-          class="form-control"
-        >
+          class="form-control">
           <option></option>
           <option>Yup</option>
         </select>
@@ -185,6 +157,10 @@
       <button type="submit" class="btn btn-default">Submit</button>
     </form>
     <div id="cf-context" class="dark-theme" role="cf-context" cf-context></div>
+
+    <!-- javascript tags-->
+
     <script src="todo.js"></script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
   </body>
 </html>
