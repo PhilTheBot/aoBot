@@ -13,264 +13,253 @@
 
 
   <body>
-    <form id="form">
-      <cf-robot-message cf-questions="Hi, I'm Phil"></cf-robot-message>
-      <cf-robot-message cf-questions="I can help you open a Giving Account, so you can begin granting money to the organizations you care about!"></cf-robot-message>
-      <fieldset>
-        <label for="fname">First Name</label>
-        <input
-          required
-          cf-questions="What's your name?"
-          cf-input-placeholder="Enter your First name"
-          type="text"
-          class="form-control"
-          name="fname"
-          id="fname"/>
-      </fieldset>
+    <div class="chat-container">
+      <form id="form">
+        <cf-robot-message cf-questions="Hi, I'm Phil"></cf-robot-message>
+        <cf-robot-message cf-questions="I can help you open a Giving Account, so you can begin granting money to the organizations you care about!"></cf-robot-message>
+        <fieldset>
+          <label for="fname">First Name</label>
+          <input
+            required
+            cf-questions="What's your name?"
+            cf-input-placeholder="Enter your First name"
+            type="text"
+            class="form-control"
+            name="fname"
+            id="fname"/>
+        </fieldset>
 
-      <fieldset>
-        <label for="lname">Last Name</label>
-        <input 
-          required 
-          cf-questions="Nice to meet you. {fname}! And what's your last name?" 
-          cf-input-placeholder="Enter your Last name"
-          type="text"
-          class="form-control" 
-          name="lname" 
-          id="lname"/>
-      </fieldset>
+        <fieldset>
+          <label for="lname">Last Name</label>
+          <input 
+            required 
+            cf-questions="Nice to meet you. {fname}! And what's your last name?" 
+            cf-input-placeholder="Enter your Last name"
+            type="text"
+            class="form-control" 
+            name="lname" 
+            id="lname"/>
+        </fieldset>
 
-      <fieldset>
-        <label for="ssn">SSN</label>
-        <input
-          cf-questions="Ok, I know we just met, but I'm going to need your Social Security number. I'll turn around while you enter it..."
-          cf-input-placeholder="Social security number"
-          type="password"
-          class="form-control"
-          name="ssn"
-          id="ssn"
-        />
-      </fieldset>
-
-      <fieldset>
-        <label for="dob">dob</label>
-        <input
-          cf-questions="What is you date of birth?"
-          cf-input-placeholder="mm/dd/yyyy"
-          type="date"
-          name="dob"
-          id="dob"
-          class="form-control"
+        <fieldset>
+          <label for="ssn">SSN</label>
+          <input
+            cf-questions="Ok, I know we just met, but I'm going to need your Social Security number. I'll turn around while you enter it..."
+            cf-input-placeholder="Social security number"
+            type="password"
+            class="form-control"
+            name="ssn"
+            id="ssn"
           />
-      </fieldset>
+        </fieldset>
 
-      <fieldset>
-        <label for="phone">phone</label>
-        <input
-          cf-questions="If we ever need to reach you by phone, what number should we use?"
-          cf-input-placeholder="Enter your phone number"
-          type="number"
-          name="phone"
-          id="phone"
-          class="form-control"
-        />
-      </fieldset>
+        <fieldset>
+          <label for="dob">dob</label>
+          <input
+            cf-questions="What is you date of birth?"
+            cf-input-placeholder="mm/dd/yyyy"
+            type="date"
+            name="dob"
+            id="dob"
+            class="form-control"
+            />
+        </fieldset>
 
-      <fieldset>
-        <label for="email">Email</label>
-        <input
-          pattern=".+\@.+\..+"
-          cf-error="E-mail not correct"
-          cf-questions="What is your email address so I can send you important correspondence?"
-          type="email"
-          class="form-control"
-          name="email"
-          id="your-email"
-        />
-      </fieldset>
-
-      <fieldset>
-        <label for="address">Address</label>
-        <input
-          cf-questions="What is your Street address (or PO Box)?"
-          type="text"
-          class="form-control"
-          name="address"
-          id="address"
-        />
-      </fieldset>
-
-      <fieldset>
-        <label for="city">City</label>
-        <input
-          cf-questions="In what city do you live?"
-          type="text"
-          class="form-control"
-          name="city"
-          id="city"
-        />
-      </fieldset>
-
-      <fieldset>
-        <label for="state">State</label>
-        <select
-          cf-questions="I'm not great with geography, what state is that?"
-          cf-input-placeholder="Select state above."
-          class="form-control"
-          name="state"
-          id="state"
-         >
-          <option value="---">---</option>
-          <option value="Alabama">Alabama</option>
-          <option value="Alaska">Alaska</option>
-          <option value="Arizona">Arizona</option>
-          <option value="Arkansas">Arkansas</option>
-          <option value="California">California</option>
-          <option value="Colorado">Colorado</option>
-          <option value="Connecticut">Connecticut</option>
-          <option value="Delaware">Delaware</option>
-          <option value="District of Columbia">District of Columbia</option>
-          <option value="Florida">Florida</option>
-          <option value="Georgia">Georgia</option>
-          <option value="Guam">Guam</option>
-          <option value="Hawaii">Hawaii</option>
-          <option value="Idaho">Idaho</option>
-          <option value="Illinois">Illinois</option>
-          <option value="Indiana">Indiana</option>
-          <option value="Iowa">Iowa</option>
-          <option value="Kansas">Kansas</option>
-          <option value="Kentucky">Kentucky</option>
-          <option value="Louisiana">Louisiana</option>
-          <option value="Maine">Maine</option>
-          <option value="Maryland">Maryland</option>
-          <option value="Massachusetts">Massachusetts</option>
-          <option value="Michigan">Michigan</option>
-          <option value="Minnesota">Minnesota</option>
-          <option value="Mississippi">Mississippi</option>
-          <option value="Missouri">Missouri</option>
-          <option value="Montana">Montana</option>
-          <option value="Nebraska">Nebraska</option>
-          <option value="Nevada">Nevada</option>
-          <option value="New Hampshire">New Hampshire</option>
-          <option value="New Jersey">New Jersey</option>
-          <option value="New Mexico">New Mexico</option>
-          <option value="New York">New York</option>
-          <option value="North Carolina">North Carolina</option>
-          <option value="North Dakota">North Dakota</option>
-          <option value="Northern Marianas Islands">Northern Marianas Islands</option>
-          <option value="Ohio">Ohio</option>
-          <option value="Oklahoma">Oklahoma</option>
-          <option value="Oregon">Oregon</option>
-          <option value="Pennsylvania">Pennsylvania</option>
-          <option value="Puerto Rico">Puerto Rico</option>
-          <option value="Rhode Island">Rhode Island</option>
-          <option value="South Carolina">South Carolina</option>
-          <option value="South Dakota">South Dakota</option>
-          <option value="Tennessee">Tennessee</option>
-          <option value="Texas">Texas</option>
-          <option value="Utah">Utah</option>
-          <option value="Vermont">Vermont</option>
-          <option value="Virginia">Virginia</option>
-          <option value="Virgin Islands">Virgin Islands</option>
-          <option value="Washington">Washington</option>
-          <option value="West Virginia">West Virginia</option>
-          <option value="Wisconsin">Wisconsin</option>
-          <option value="Wyoming">Wyoming</option>
-         </select>
-      </fieldset>
-
-      <fieldset>
-        <label for="zipcode">Zip</label>
-        <input
-          cf-questions="I'll be needing the zip code for that location. Just to be more accurate."
-          cf-input-placeholder="Enter zip code"
-          type="text"
-          class="form-control"
-          name="zipcode"
-          id="zipcode"
+        <fieldset>
+          <label for="phone">phone</label>
+          <input
+            cf-questions="If we ever need to reach you by phone, what number should we use?"
+            cf-input-placeholder="Enter your phone number"
+            type="number"
+            name="phone"
+            id="phone"
+            class="form-control"
           />
-      </fieldset>
-      <cf-robot-message cf-questions="Ok. Got it."></cf-robot-message>
-      <cf-robot-message cf-questions="Now this is my favorite part: naming your Giving Account."></cf-robot-message>
-      <cf-robot-message cf-questions="This is the name we'll share with charities when you grant (unless you choose to remain anonymous). 
-      "></cf-robot-message>
-      <fieldset>
-        <label for="giving-account-name">Giving-account-name</label>
-        <input
-          cf-questions="What would you like to name your Giving Account?"
-          cf-input-placeholder="Example: {lname} Family Fund"
-          type="text"
-          class="form-control"
-          name="giving-account-name"
-          id="giving-account-name"
+        </fieldset>
+
+        <fieldset>
+          <label for="email">Email</label>
+          <input
+            pattern=".+\@.+\..+"
+            cf-error="E-mail not correct"
+            cf-questions="What is your email address so I can send you important correspondence?"
+            type="email"
+            class="form-control"
+            name="email"
+            id="your-email"
           />
-      </fieldset>
+        </fieldset>
 
-      <fieldset>
-        <label for="correspondence-name">correspondence-name</label>
-        <input
-          cf-questions="What name would you like us to use when we send you correspondence like account updates and acknowledgements?"
-          cf-input-placeholder="Example: Mr. {fname} {lname}"
-          type="text"
-          class="form-control"
-          name="correspondence-name"
-          id="correspondence-name"
-        />
-      </fieldset>
+        <fieldset>
+          <label for="address">Address</label>
+          <input
+            cf-questions="What is your Street address (or PO Box)?"
+            type="text"
+            class="form-control"
+            name="address"
+            id="address"
+          />
+        </fieldset>
 
-      <fieldset>
-        <label for="brokerage-option">brokerage-option</label>
-        <select
-          cf-questions="Would you like to be able to make contributions to your Giving Account from your Fidelity Brokerage account?"
-          class="form-control"
-          name="brokerage-option"
-          id="brokerage-option">
-          <option value="yes">Yes</option>
-          <option value="no">No</option>
-        </select>
-      </fieldset>
+        <fieldset>
+          <label for="city">City</label>
+          <input
+            cf-questions="In what city do you live?"
+            type="text"
+            class="form-control"
+            name="city"
+            id="city"
+          />
+        </fieldset>
 
-      <fieldset>
-        <label for="terms-and-conditions">terms-and-conditions</label>
-        <select
-          cf-conditional-brokerage-option="yes"
-          cf-questions="Great, I'll set that up! Our site makes it really simple to contribute from your Fidelity account. Bill from Legal just informed me we will need you to read and agree to our <i>Terms and Conditions</i>. Good thing is you only need to do this once; we'll use this for any future contributions."
-          class="form-control"
-          name="terms-and-conditions"
-          id="terms-and-conditions">
-          <option>I agree.</option>
-          <option>I do not agree.</option>
-        </select>
-      </fieldset>
+        <fieldset>
+          <label for="state">State</label>
+          <select
+            cf-questions="I'm not great with geography, what state is that?"
+            cf-input-placeholder="Select state above."
+            class="form-control"
+            name="state"
+            id="state"
+          >
+            <option value="---">---</option>
+            <option value="Alabama">Alabama</option>
+            <option value="Alaska">Alaska</option>
+            <option value="Arizona">Arizona</option>
+            <option value="Arkansas">Arkansas</option>
+            <option value="California">California</option>
+            <option value="Colorado">Colorado</option>
+            <option value="Connecticut">Connecticut</option>
+            <option value="Delaware">Delaware</option>
+            <option value="District of Columbia">District of Columbia</option>
+            <option value="Florida">Florida</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Guam">Guam</option>
+            <option value="Hawaii">Hawaii</option>
+            <option value="Idaho">Idaho</option>
+            <option value="Illinois">Illinois</option>
+            <option value="Indiana">Indiana</option>
+            <option value="Iowa">Iowa</option>
+            <option value="Kansas">Kansas</option>
+            <option value="Kentucky">Kentucky</option>
+            <option value="Louisiana">Louisiana</option>
+            <option value="Maine">Maine</option>
+            <option value="Maryland">Maryland</option>
+            <option value="Massachusetts">Massachusetts</option>
+            <option value="Michigan">Michigan</option>
+            <option value="Minnesota">Minnesota</option>
+            <option value="Mississippi">Mississippi</option>
+            <option value="Missouri">Missouri</option>
+            <option value="Montana">Montana</option>
+            <option value="Nebraska">Nebraska</option>
+            <option value="Nevada">Nevada</option>
+            <option value="New Hampshire">New Hampshire</option>
+            <option value="New Jersey">New Jersey</option>
+            <option value="New Mexico">New Mexico</option>
+            <option value="New York">New York</option>
+            <option value="North Carolina">North Carolina</option>
+            <option value="North Dakota">North Dakota</option>
+            <option value="Northern Marianas Islands">Northern Marianas Islands</option>
+            <option value="Ohio">Ohio</option>
+            <option value="Oklahoma">Oklahoma</option>
+            <option value="Oregon">Oregon</option>
+            <option value="Pennsylvania">Pennsylvania</option>
+            <option value="Puerto Rico">Puerto Rico</option>
+            <option value="Rhode Island">Rhode Island</option>
+            <option value="South Carolina">South Carolina</option>
+            <option value="South Dakota">South Dakota</option>
+            <option value="Tennessee">Tennessee</option>
+            <option value="Texas">Texas</option>
+            <option value="Utah">Utah</option>
+            <option value="Vermont">Vermont</option>
+            <option value="Virginia">Virginia</option>
+            <option value="Virgin Islands">Virgin Islands</option>
+            <option value="Washington">Washington</option>
+            <option value="West Virginia">West Virginia</option>
+            <option value="Wisconsin">Wisconsin</option>
+            <option value="Wyoming">Wyoming</option>
+          </select>
+        </fieldset>
 
-      <fieldset style="display: none;">
-        <label for="thats-all">That's it. You are all set. I'll let you review everything we've discussed before you click submit. Let me know of you want to cancel account opening or proceed?</label>
-        <select
-          cf-questions="Are you ready to submit the form?"
-          name="submit-form"
-          id="submit-form"
-          class="form-control">
-          <option>Cancel</option>
-          <option>Let me review</option>
-        </select>
-      </fieldset>
+        <fieldset>
+          <label for="zipcode">Zip</label>
+          <input
+            cf-questions="I'll be needing the zip code for that location. Just to be more accurate."
+            cf-input-placeholder="Enter zip code"
+            type="text"
+            class="form-control"
+            name="zipcode"
+            id="zipcode"
+            />
+        </fieldset>
+        <cf-robot-message cf-questions="Ok. Got it."></cf-robot-message>
+        <cf-robot-message cf-questions="Now this is my favorite part: naming your Giving Account."></cf-robot-message>
+        <cf-robot-message cf-questions="This is the name we'll share with charities when you grant (unless you choose to remain anonymous). 
+        "></cf-robot-message>
+        <fieldset>
+          <label for="giving-account-name">Giving-account-name</label>
+          <input
+            cf-questions="What would you like to name your Giving Account?"
+            cf-input-placeholder="Example: {lname} Family Fund"
+            type="text"
+            class="form-control"
+            name="giving-account-name"
+            id="giving-account-name"
+            />
+        </fieldset>
 
-      <fieldset style="display: none;">
-        <label for="thats-all">Want to start over?</label>
-        <select
-          cf-questions="Want to start over?"
-          name="repeat"
-          id="repeat"
-          class="form-control"
-        >
-          <option></option>
-          <option>Yes, let's go again</option>
-        </select>
-      </fieldset>
+        <fieldset>
+          <label for="correspondence-name">correspondence-name</label>
+          <input
+            cf-questions="What name would you like us to use when we send you correspondence like account updates and acknowledgements?"
+            cf-input-placeholder="Example: Mr. {fname} {lname}"
+            type="text"
+            class="form-control"
+            name="correspondence-name"
+            id="correspondence-name"
+          />
+        </fieldset>
 
-      <button type="submit" class="btn btn-default">Submit</button>
-    </form>
-    <div id="cf-context" class="dark-theme" role="cf-context" cf-context></div>
+        <fieldset>
+          <label for="brokerage-option">brokerage-option</label>
+          <select
+            cf-questions="Would you like to be able to make contributions to your Giving Account from your Fidelity Brokerage account?"
+            class="form-control"
+            name="brokerage-option"
+            id="brokerage-option">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <label for="terms-and-conditions">terms-and-conditions</label>
+          <select
+            cf-conditional-brokerage-option="yes"
+            cf-questions="Great, I'll set that up! Our site makes it really simple to contribute from your Fidelity account. Bill from Legal just informed me we will need you to read and agree to our <i>Terms and Conditions</i>. Good thing is you only need to do this once; we'll use this for any future contributions."
+            class="form-control"
+            name="terms-and-conditions"
+            id="terms-and-conditions">
+            <option>I agree.</option>
+            <option>I do not agree.</option>
+          </select>
+        </fieldset>
+
+        <fieldset style="display: none;">
+          <label for="thats-all">That's it. You are all set. I'll let you review everything we've discussed before you click submit. Let me know of you want to cancel account opening or proceed?</label>
+          <select
+            cf-questions="Are you ready to submit the form?"
+            name="submit-form"
+            id="submit-form"
+            class="form-control">
+            <option>No</option>
+            <option>Yes</option>
+          </select>
+        </fieldset>
+
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <div id="cf-context" class="dark-theme" role="cf-context" cf-context></div>
+    </div>
 
     <!-- javascript tags-->
 
